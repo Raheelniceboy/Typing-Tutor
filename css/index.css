@@ -37,7 +37,7 @@ section > figure {
 }
 
 #section1 > figure {
-    background: url("../img/hands.png");    
+    background: url("../img/intro/hands.svg");    
 }
 
 #section2 {
@@ -45,7 +45,7 @@ section > figure {
 }
 
 #section2 > figure {
-    background: url("../img/plan.png");
+    background: url("../img/intro/plan.svg");
 }
 
 #section3 {
@@ -53,7 +53,7 @@ section > figure {
 }
 
 #section3 > figure {
-    background: url("../img/graph.png");
+    background: url("../img/intro/graph.svg");
 }
 
 #section4 {
@@ -61,5 +61,5 @@ section > figure {
 }
 
 #section4 > figure {
-    background: url("../img/free.png");
+    background: url("../img/intro/free.svg");
 }
