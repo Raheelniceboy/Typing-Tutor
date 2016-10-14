@@ -1,0 +1,204 @@
+<!doctype html>
+<head>
+  <title>Typing Tutor - Lessons</title>
+  <meta charset="utf-8">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/lessons.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/fb.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">TypingTutor</a>
+      </div>
+    
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+          <li class="active">
+            <a href="lessons.html">Lessons</a>
+          </li>
+          <li>
+            <a href="practice.html">Practice</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+        </ul>
+        <form class="nav navbar-form navbar-right">
+          <div class="btn btn-primary btn-fb-login">Sign in</div>
+        </form>
+        <ul class="nav navbar-nav navbar-right" id="nav-profile">
+          <a href="me.html"><img class="fb-picture"/></a>
+          <li>
+            <a id="msg-logged-in" href="me.html"></a>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
+
+  <main class="container">
+    <section id="home-row" class="row">
+      <h2>Home Row</h2>
+      <ul class="text-center">
+        <li class="lesson" id="home-fj">
+          <h3 class="lesson-summary">fj</h3>
+          <p class="lesson-detail">F and J</p>
+        </li> 
+        <li class="lesson" id="home-dk">
+          <h3 class="lesson-summary">dk</h3>
+          <p class="lesson-detail">D and K</p>
+        </li> 
+        <li class="lesson" id="home-sl">
+          <h3 class="lesson-summary">sl</h3>
+          <p class="lesson-detail">S and L</p>
+        </li> 
+        <li class="lesson" id="home-a">
+          <h3 class="lesson-summary">a;</h3>
+          <p class="lesson-detail">A and ;</p>
+        </li> 
+        <li class="lesson" id="home-gh">
+          <h3 class="lesson-summary">gh</h3>
+          <p class="lesson-detail">G and H</p>
+        </li> 
+        <li class="lesson" id="home-HR">
+          <h3 class="lesson-summary">HR</h3>
+          <p class="lesson-detail">Home Row Keys</p>
+        </li> 
+      </ul>
+    </section>
+
+    <section id="top-row" class="row">
+      <h2>Top Row</h2>
+      <ul class="text-center">
+        <li class="lesson" id="top-ru">
+          <h3 class="lesson-summary">ru</h3>
+          <p class="lesson-detail">R and U</p>
+        </li> 
+        <li class="lesson" id="top-ei">
+          <h3 class="lesson-summary">ei</h3>
+          <p class="lesson-detail">E and I</p>
+        </li> 
+        <li class="lesson" id="top-wo">
+          <h3 class="lesson-summary">wo</h3>
+          <p class="lesson-detail">W and O</p>
+        </li> 
+        <li class="lesson" id="top-qp">
+          <h3 class="lesson-summary">qp</h3>
+          <p class="lesson-detail">Q and P</p>
+        </li> 
+        <li class="lesson" id="top-ty">
+          <h3 class="lesson-summary">ty</h3>
+          <p class="lesson-detail">T and Y</p>
+        </li> 
+        <li class="lesson" id="top-TR">
+          <h3 class="lesson-summary">TR</h3>
+          <p class="lesson-detail">Top Row Keys</p>
+        </li> 
+      </ul>
+    </section>
+
+    <section id="bottom-row" class="row">
+      <h2>Bottom Row</h2>
+      <ul class="text-center">
+        <li class="lesson" id="bottom-vm">
+          <h3 class="lesson-summary">vm</h3>
+          <p class="lesson-detail">V and M</p>
+        </li> 
+        <li class="lesson" id="bottom-c">
+          <h3 class="lesson-summary">c,</h3>
+          <p class="lesson-detail">C and ,</p>
+        </li> 
+        <li class="lesson" id="bottom-x">
+          <h3 class="lesson-summary">x.</h3>
+          <p class="lesson-detail">X and .</p>
+        </li> 
+        <li class="lesson" id="bottom-z">
+          <h3 class="lesson-summary">z/</h3>
+          <p class="lesson-detail">Z and /</p>
+        </li> 
+        <li class="lesson" id="bottom-bn">
+          <h3 class="lesson-summary">bn</h3>
+          <p class="lesson-detail">B and N</p>
+        </li> 
+        <li class="lesson" id="bottom-BR">
+          <h3 class="lesson-summary">BR</h3>
+          <p class="lesson-detail">Bottom Row Keys</p>
+        </li> 
+      </ul>
+    </section>
+
+    <section id="number-row" class="row">
+      <h2>Number Row</h2>
+      <ul class="text-center">
+        <li class="lesson" id="number-47">
+          <h3 class="lesson-summary">47</h3>
+          <p class="lesson-detail">4 and 7</p>
+        </li> 
+        <li class="lesson" id="number-38">
+          <h3 class="lesson-summary">38</h3>
+          <p class="lesson-detail">3 and 8</p>
+        </li> 
+        <li class="lesson" id="number-29">
+          <h3 class="lesson-summary">29</h3>
+          <p class="lesson-detail">2 and 9</p>
+        </li> 
+        <li class="lesson" id="number-10">
+          <h3 class="lesson-summary">10</h3>
+          <p class="lesson-detail">1 and 0</p>
+        </li> 
+        <li class="lesson" id="number-56">
+          <h3 class="lesson-summary">56</h3>
+          <p class="lesson-detail">5 and 6</p>
+        </li> 
+        <li class="lesson" id="number-NR">
+          <h3 class="lesson-summary">NR</h3>
+          <p class="lesson-detail">Number Row Keys</p>
+        </li> 
+      </ul>
+    </section>
+
+    <section id="shift" class="row">
+      <h2>Shift Key</h2>
+      <ul class="text-center">
+        <li class="lesson" id="shift-home">
+          <h3 class="lesson-summary">H+</h3>
+          <p class="lesson-detail">Home Row</p>
+        </li> 
+        <li class="lesson" id="shift-top">
+          <h3 class="lesson-summary">T+</h3>
+          <p class="lesson-detail">Top Row</p>
+        </li> 
+        <li class="lesson" id="shift-bottom">
+          <h3 class="lesson-summary">B+</h3>
+          <p class="lesson-detail">Bottom Row</p>
+        </li> 
+      </ul>
+    </section>
+
+    <section id="other" class="row">
+      <h2>Other</h2>
+      <ul class="text-center">
+        <li class="lesson">
+          <h3 class="lesson-summary" id="punctuations">?!</h3>
+          <p class="lesson-detail">Punctuations</p>
+        </li> 
+      </ul>
+    </section>
+  </main>
+
+</body>

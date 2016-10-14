@@ -1,0 +1,24 @@
+.lesson {
+    display: inline-block;
+}
+
+.lesson-summary {
+    border-radius: 50%;
+    background-color: #FF7518;
+    color: #fff;
+    width: 2em;
+    height: 2em;
+    margin: 0 .3em;
+    line-height: 2em;
+    text-align: center;
+    font-size: 4em;
+}
+
+.lesson-completed > .lesson-summary {
+    background-color: #3FB618;
+}
+
+.lesson-detail {
+    text-align: center;
+    padding-top: 10px;
+}

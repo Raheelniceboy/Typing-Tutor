@@ -30,8 +30,8 @@ $(function() {
     }
 
     $("#keyboard-toggle").on("click", function() {
-        $("#keyboard").toggle();
-        if ($("#keyboard").is(":visible")) $("#typing-panel").css("max-height", "30vh");
+        $("#hint").toggle();
+        if ($("#hint").is(":visible")) $("#typing-panel").css("max-height", "30vh");
         else $("#typing-panel").css("max-height", "60vh");
     });
 
