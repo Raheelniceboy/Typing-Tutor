@@ -56,27 +56,27 @@
       <h2>Home Row</h2>
       <ul class="text-center">
         <li class="lesson" id="home-fj">
-          <h3 class="lesson-summary">fj</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/1") ?>">fj</a></h3>
           <p class="lesson-detail">F and J</p>
         </li> 
         <li class="lesson" id="home-dk">
-          <h3 class="lesson-summary">dk</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/2") ?>">dk</a></h3>
           <p class="lesson-detail">D and K</p>
         </li> 
         <li class="lesson" id="home-sl">
-          <h3 class="lesson-summary">sl</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/3") ?>">sl</a></h3>
           <p class="lesson-detail">S and L</p>
         </li> 
         <li class="lesson" id="home-a">
-          <h3 class="lesson-summary">a;</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/4") ?>">a;</a></h3>
           <p class="lesson-detail">A and ;</p>
         </li> 
         <li class="lesson" id="home-gh">
-          <h3 class="lesson-summary">gh</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/5") ?>">gh</a></h3>
           <p class="lesson-detail">G and H</p>
         </li> 
         <li class="lesson" id="home-HR">
-          <h3 class="lesson-summary">HR</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/6") ?>">HR</a></h3>
           <p class="lesson-detail">Home Row Keys</p>
         </li> 
       </ul>
@@ -86,27 +86,27 @@
       <h2>Top Row</h2>
       <ul class="text-center">
         <li class="lesson" id="top-ru">
-          <h3 class="lesson-summary">ru</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/7") ?>">ru</a></h3>
           <p class="lesson-detail">R and U</p>
         </li> 
         <li class="lesson" id="top-ei">
-          <h3 class="lesson-summary">ei</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/8") ?>">ei</a></h3>
           <p class="lesson-detail">E and I</p>
         </li> 
         <li class="lesson" id="top-wo">
-          <h3 class="lesson-summary">wo</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/9") ?>">wo</a></h3>
           <p class="lesson-detail">W and O</p>
         </li> 
         <li class="lesson" id="top-qp">
-          <h3 class="lesson-summary">qp</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/10") ?>">qp</a></h3>
           <p class="lesson-detail">Q and P</p>
         </li> 
         <li class="lesson" id="top-ty">
-          <h3 class="lesson-summary">ty</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/11") ?>">ty</a></h3>
           <p class="lesson-detail">T and Y</p>
         </li> 
         <li class="lesson" id="top-TR">
-          <h3 class="lesson-summary">TR</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/12") ?>">TR</a></h3>
           <p class="lesson-detail">Top Row Keys</p>
         </li> 
       </ul>
@@ -116,27 +116,27 @@
       <h2>Bottom Row</h2>
       <ul class="text-center">
         <li class="lesson" id="bottom-vm">
-          <h3 class="lesson-summary">vm</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/13") ?>">vm</a></h3>
           <p class="lesson-detail">V and M</p>
         </li> 
         <li class="lesson" id="bottom-c">
-          <h3 class="lesson-summary">c,</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/14") ?>">c,</a></h3>
           <p class="lesson-detail">C and ,</p>
         </li> 
         <li class="lesson" id="bottom-x">
-          <h3 class="lesson-summary">x.</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/15") ?>">x.</a></h3>
           <p class="lesson-detail">X and .</p>
         </li> 
         <li class="lesson" id="bottom-z">
-          <h3 class="lesson-summary">z/</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/16") ?>">z/</a></h3>
           <p class="lesson-detail">Z and /</p>
         </li> 
         <li class="lesson" id="bottom-bn">
-          <h3 class="lesson-summary">bn</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/17") ?>">bn</a></h3>
           <p class="lesson-detail">B and N</p>
         </li> 
         <li class="lesson" id="bottom-BR">
-          <h3 class="lesson-summary">BR</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/18") ?>">BR</a></h3>
           <p class="lesson-detail">Bottom Row Keys</p>
         </li> 
       </ul>
@@ -146,27 +146,27 @@
       <h2>Number Row</h2>
       <ul class="text-center">
         <li class="lesson" id="number-47">
-          <h3 class="lesson-summary">47</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/19") ?>">47</a></h3>
           <p class="lesson-detail">4 and 7</p>
         </li> 
         <li class="lesson" id="number-38">
-          <h3 class="lesson-summary">38</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/20") ?>">38</a></h3>
           <p class="lesson-detail">3 and 8</p>
         </li> 
         <li class="lesson" id="number-29">
-          <h3 class="lesson-summary">29</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/21") ?>">29</a></h3>
           <p class="lesson-detail">2 and 9</p>
         </li> 
         <li class="lesson" id="number-10">
-          <h3 class="lesson-summary">10</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/22") ?>">10</a></h3>
           <p class="lesson-detail">1 and 0</p>
         </li> 
         <li class="lesson" id="number-56">
-          <h3 class="lesson-summary">56</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/23") ?>">56</a></h3>
           <p class="lesson-detail">5 and 6</p>
         </li> 
         <li class="lesson" id="number-NR">
-          <h3 class="lesson-summary">NR</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/24") ?>">NR</a></h3>
           <p class="lesson-detail">Number Row Keys</p>
         </li> 
       </ul>
@@ -176,15 +176,15 @@
       <h2>Shift Key</h2>
       <ul class="text-center">
         <li class="lesson" id="shift-home">
-          <h3 class="lesson-summary">H+</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/25") ?>">H+</a></h3>
           <p class="lesson-detail">Home Row</p>
         </li> 
         <li class="lesson" id="shift-top">
-          <h3 class="lesson-summary">T+</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/26") ?>">T+</a></h3>
           <p class="lesson-detail">Top Row</p>
         </li> 
         <li class="lesson" id="shift-bottom">
-          <h3 class="lesson-summary">B+</h3>
+          <h3 class="lesson-summary"><a href="<?php echo site_url("lesson/detail/27") ?>">B+</a></h3>
           <p class="lesson-detail">Bottom Row</p>
         </li> 
       </ul>
@@ -194,7 +194,7 @@
       <h2>Other</h2>
       <ul class="text-center">
         <li class="lesson">
-          <h3 class="lesson-summary" id="punctuations">?!</h3>
+          <h3 class="lesson-summary" id="punctuations"><a href="<?php echo site_url("lesson/detail/28") ?>">?!</a></h3>
           <p class="lesson-detail">Punctuations</p>
         </li> 
       </ul>

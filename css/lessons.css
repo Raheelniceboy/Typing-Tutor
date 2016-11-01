@@ -22,3 +22,11 @@
     text-align: center;
     padding-top: 10px;
 }
+
+a:hover {
+    text-decoration: none;
+    color: #2780e3;
+}
+a {
+    color: #fff;
+}
