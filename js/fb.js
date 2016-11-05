@@ -5,10 +5,14 @@ function getInfo() {
         "/me?fields=first_name,name", 
         function (response) {
             if (response && !response.error) {
-                var userId = response.id;
-                $('#msg-logged-in').attr("href", "me/info/" + userId);
+                userId = response.id;
+               
+            
 
                 $("#msg-logged-in").text("Welcome, " + response.first_name);
+                 var st = "me/info/" + userId;
+                $('#msg-logged-in').attr("href", st);    
+
                 $("#name").text(response.name);
                 
                 

@@ -71,9 +71,9 @@
           </div>
           <table class="table">
             <tbody>
-              <tr><td>Words typed (Only for practice mode)</td> <td><span id="words-typed">0</span></td></tr>
-              <tr><td>Average CPM</td>  <td><span id="average-cpm">0</span></td></tr>
-              <tr><td>Accuracy</td> <td><span id="accuracy">0</span>%</td></tr>
+              <tr><td>Words typed (Only for practice mode)</td> <td><span id="words-typed"><?php echo $word_typed ?></span></td></tr>
+              <tr><td>Average CPM</td>  <td><span id="average-cpm"><?php echo $avg_cpm ?></span></td></tr>
+              <tr><td>Accuracy</td> <td><span id="accuracy"><?php echo $avg_accuracy; ?></span>%</td></tr>
             </tbody>
           </table>
       </div>
@@ -86,12 +86,23 @@
     </div>
     <table class="table">
       <tbody>
-        <tr>
-          <td>You completed <a id="exercise-name" href="<?php echo site_url("lesson/detail/10") ?>">Q and P</a> in <span id="exerise-time">2:43</span> with a CPM rate of <span id="exercise-cpm">100</span> and <span id="exercise-activity">100</span>% accuracy.</td>
-          <td><span id="log-time">09:10, 11 Dec 2013</span>
-        </tr>
+          <?php foreach ($log as $key) { ?>
+          <?php if ($key['type'] == "lesson") { ?>
+            <tr>
+              <td>You completed <a id="exercise-name" href="<?php echo site_url('lesson/detail/')?>"><?php echo $key['title'] ?></a> in <span id="exerise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
+              <td><span id="log-time"><?php echo $key['date'] ?></span>
+            </tr>
+           <?php } else { ?>
+              <tr>
+              <td>You completed <a id="exercise-name" href="<?php echo site_url('practice/paragraph/') . $key['title_id'] ?>"><?php echo $key['title'] ?></a> in <span id="exerise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
+              <td><span id="log-time"><?php echo $key['date'] ?></span>
+            </tr>
+           <?php } ?>
+          <?php } ?>
+     
       </tbody>
     </table>
+
   </main>
   
 </body>

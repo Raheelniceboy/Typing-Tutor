@@ -33,6 +33,7 @@
 			$data['accuracy'] = $this->input->post('accuracy');
 			$data['cpm'] = $this->input->post('cpm');
 
+
 			$this->User_model->save_log($data);
 		}
 	}

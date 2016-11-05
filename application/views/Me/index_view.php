@@ -47,7 +47,7 @@
         <ul class="nav navbar-nav navbar-right" id="nav-profile">
           <a href="<?php echo base_url('me'); ?>"><img class="fb-picture"/></a>
           <li>
-            <a id="msg-logged-in" href="<?php echo base_url('me'); ?>"></a>
+            <a id="msg-logged-in" href=""></a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->

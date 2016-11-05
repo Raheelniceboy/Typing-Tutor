@@ -33,5 +33,13 @@
 			$this->db->set('date', 'NOW()', FALSE);
 			$this->db->insert('log', $data);
 		}
+		function get_log($user_id)
+		{
+			$this->db->select('*');
+			$this->db->from('log');
+			$this->db->where('user_id', $user_id);
+			$query = $this->db->get();
+			return $query->result_array();
+		}
 	}
 ?>

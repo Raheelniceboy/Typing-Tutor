@@ -7,7 +7,6 @@
 			// die();
 			
 			$data= array();
-
 			$this->load->view('Lesson/index_view', $data);
 		}
 		public function detail(){

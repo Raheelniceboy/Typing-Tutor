@@ -14,5 +14,6 @@ function successDialog(data) {
             cpm : data.cpm
         },
         function(data, status){
+        	console.log("posted");
         });
 }

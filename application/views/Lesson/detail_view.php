@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="<?php echo base_url('css/typing.css'); ?>">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="<?php echo base_url(<?php echo base_url('js/fb.js'); ?>); ?>"></script>
+  <script src="<?php echo base_url('js/fb.js');?> "></script>
   <script src="<?php echo base_url('js/results.js'); ?>"></script>
   <script src="<?php echo base_url('js/typing.js'); ?>"></script>
 </head>
 <body>
   <script>
+    var userId;
     var titleName = '<?php echo $lesson['name']; ?>';
     var titleId = '<?php echo $lesson['id']; ?>';
     var typeName = "lesson";
