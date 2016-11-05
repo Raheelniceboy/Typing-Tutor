@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2016 at 05:01 AM
+-- Generation Time: Nov 05, 2016 at 06:07 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -68,14 +68,22 @@ INSERT INTO `lesson` (`id`, `src`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `text`
+-- Table structure for table `paragraph`
 --
 
-CREATE TABLE `text` (
-  `text_id` int(11) NOT NULL,
-  `title` varchar(50) NOT NULL,
+CREATE TABLE `paragraph` (
+  `length` int(11) NOT NULL,
   `src` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `paragraph`
+--
+
+INSERT INTO `paragraph` (`length`, `src`) VALUES
+(100, 'text/lesson/paragraphs/100.txt'),
+(150, 'text/lesson/paragraphs/150.txt'),
+(200, 'text/lesson/paragraphs/200.txt');
 
 -- --------------------------------------------------------
 
@@ -125,10 +133,10 @@ ALTER TABLE `lesson`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `text`
+-- Indexes for table `paragraph`
 --
-ALTER TABLE `text`
-  ADD PRIMARY KEY (`text_id`);
+ALTER TABLE `paragraph`
+  ADD PRIMARY KEY (`length`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -139,11 +147,6 @@ ALTER TABLE `text`
 --
 ALTER TABLE `lesson`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
---
--- AUTO_INCREMENT for table `text`
---
-ALTER TABLE `text`
-  MODIFY `text_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
