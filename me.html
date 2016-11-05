@@ -52,28 +52,42 @@
 
   <main class="container">
       
-    <div class="well">
-      <div><img class="fb-picture img-responsive img-thumbnail center-block"/></div>
-      <div class="text-center">
-        <h3 id="name"></h3> 
-        <a id="btn-logout" class="btn btn-danger">Sign out</a>
+    <div class="well row">
+      <div class="col-md-6">
+        <div><img class="fb-picture img-responsive img-thumbnail center-block"/></div>
+        <div class="text-center">
+          <h3 id="name"></h3> 
+          <a id="btn-logout" class="btn btn-danger">Sign out</a>
+        </div>
       </div>
-    </div>
-      
-    <div class="col-md-6">
-      <div class="panel panel-primary">
+      <div class="col-md-6">
+        <div class="panel panel-primary">
           <div class="panel-heading">
             <h3 class="panel-title">Your stats</h3>
           </div>
           <table class="table">
             <tbody>
-              <tr><td>Words typed</td> <td>100</td></tr>
-              <tr><td>Average CPM</td>  <td>200</td></tr>
-              <tr><td>Accuracy</td> <td>90%</td></tr>
+              <tr><td>Words typed</td> <td><span id="words-typed">0</span></td></tr>
+              <tr><td>Average CPM</td>  <td><span id="average-cpm">0</span></td></tr>
+              <tr><td>Accuracy</td> <td><span id="accuracy">0</span>%</td></tr>
             </tbody>
           </table>
-      </div>  
+      </div>
+      </div>
     </div>
+      
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title">Activity log</h3>
+    </div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>You completed <a id="exercise-name" href="#">Q and P</a> in <span id="exerise-time">2:43</span> with a CPM rate of <span id="exercise-cpm">100</span> and <span id="exercise-activity">100</span>% accuracy.</td>
+          <td><span id="log-time">09:10, 11 Dec 2013</span>
+        </tr>
+      </tbody>
+    </table>
 
   </main>
 </body>
