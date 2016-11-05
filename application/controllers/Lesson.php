@@ -13,8 +13,9 @@
 		public function detail(){
 			$this->load->model('Lesson_model');
 			$id = $this->uri->segment(3);
-			$src = $this->Lesson_model->get_src($id);
-
+			// $src = $this->Lesson_model->get_src($id);
+			$lesson = $this->Lesson_model->get_lesson($id);
+			$src = $lesson['src'];
 			// read file
 			$file = fopen($src, "r");
 			$text = fgets($file);
@@ -22,6 +23,7 @@
 
 			$data = array();
 			$data['text'] = $text;
+			$data['lesson'] = $lesson;
 			$this->load->view('Lesson/detail_view', $data);
 		}
 

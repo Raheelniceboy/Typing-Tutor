@@ -5,9 +5,15 @@
 		public function index(){
 			
 			// die();
-		
-			$data= array();
-			$this->load->view('Me/index_view', $data);
+			// $data= array();
+			// $id = $this->uri->segment(2);
+			// echo $id;
+			// // $this->load->view('Me/index_view', $data);
+		}
+		public function info(){
+			$data = array();
+			$id = $this->uri->segment(3);
+			$this->load->view('Me/info_view', $data);	
 		}
 	}
  ?>

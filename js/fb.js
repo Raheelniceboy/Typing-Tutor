@@ -1,10 +1,24 @@
+var userId;
 function getInfo() {
+
     FB.api(
         "/me?fields=first_name,name", 
         function (response) {
             if (response && !response.error) {
+                var userId = response.id;
+                $('#msg-logged-in').attr("href", "me/info/" + userId);
+
                 $("#msg-logged-in").text("Welcome, " + response.first_name);
                 $("#name").text(response.name);
+                
+                
+                $.post("/user/save_user",
+                {
+                    user_id : response.id
+                },
+                function(data, status){
+                });
+
             }
             else $("#msg-logged-in").text("Welcome!");
         }

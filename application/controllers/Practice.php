@@ -28,7 +28,9 @@ class Practice extends CI_Controller {
 	{
 		$length = $this->uri->segment(3);
 		$this->load->model('Paragraph_model');
-		$src = $this->Paragraph_model->get_src($length);
+		$paragraph = $this->Paragraph_model->get_paragraph($length);
+		$src = $paragraph['src'];
+		// $src = $this->Paragraph_model->get_src($length);
 		$pos = rand(1,30);
 
 		// read file
@@ -40,6 +42,7 @@ class Practice extends CI_Controller {
 			fclose($file);
 		$data = array();
 		$data['text'] = $text;
+		$data['paragraph'] = $paragraph;
 		$this->load->view('Practice/paragraph_view', $data);
 	}
 }

@@ -14,5 +14,13 @@
 			$row = $query->row_array();
 			return $row['src'];
 		}
+		function get_paragraph($length){
+			$this->db->select("*");
+			$this->db->from("paragraph");
+			$this->db->where("length", $length);
+			$query = $this->db->get();
+			$row = $query->row_array();
+			return $row;
+		}
 	}
 ?>

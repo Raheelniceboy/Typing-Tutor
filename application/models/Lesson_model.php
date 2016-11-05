@@ -14,5 +14,13 @@
 			$row = $query->row_array();
 			return $row['src'];
 		}
+		function get_lesson($id){
+			$this->db->select("*");
+			$this->db->from("lesson");
+			$this->db->where("id", $id);
+			$query = $this->db->get();
+			$row = $query->row_array();
+			return $row;
+		}
 	}
 ?>

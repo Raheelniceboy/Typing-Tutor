@@ -3,14 +3,15 @@
   <title>Typing Tutor</title>
   <meta charset="utf-8">
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">  
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/typing.css">
+  <link rel="stylesheet" href="<?php echo base_url('css/theme.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url('css/index.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url('css/typing.css'); ?>">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="<sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l></sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l>2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="js/fb.js"></script>
 </head>
 <body>
+  
 
   
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -55,53 +56,43 @@
   
   
   
-  <main>
-    <section id="section1" class="container-fluid">
-      <div class="feature-container col-sm-6 col-lg-4 col-lg-offset-2">
-        <div class="feature">
-          <h1>TypingTutor.com teaches you how to touch type.</h1>
-          <p>You'll be able to type fast and fluidly without looking at the keyboard.</p>
+  <main class="container">
+    <div class="well row">
+      <div class="col-md-6">
+        <div><img class="fb-picture img-responsive img-thumbnail center-block"/></div>
+        <div class="text-center">
+          <h3 id="name"></h3> 
+          <a id="btn-logout" class="btn btn-danger">Sign out</a>
         </div>
       </div>
-      <figure class="col-sm-6 col-lg-4"></figure>
-    </section>
-
-    <section id="section2" class="container-fluid">
-      <figure class="col-sm-6 col-lg-4 col-lg-offset-2"></figure>
-      <div class="feature-container col-sm-6 col-lg-4">
-        <div class="feature">
-          <h1>Steadily progress with our comprehensive lesson plan.</h1>
-          <p>Learn everything from the home row to numbers and special character keys. You can also practise your typing skills with real-life texts.</p>
-        </div>
+      <div class="col-md-6">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your stats</h3>
+          </div>
+          <table class="table">
+            <tbody>
+              <tr><td>Words typed (Only for practice mode)</td> <td><span id="words-typed">0</span></td></tr>
+              <tr><td>Average CPM</td>  <td><span id="average-cpm">0</span></td></tr>
+              <tr><td>Accuracy</td> <td><span id="accuracy">0</span>%</td></tr>
+            </tbody>
+          </table>
       </div>
-    </section>
-
-    <section id="section3" class="container-fluid">
-      <div class="feature-container col-sm-6 col-lg-4 col-lg-offset-2">
-        <div class="feature">
-          <h1>Watch yourself advancing everyday.</h1>
-          <p>Sign in to save your progress and share it with your friends on Facebook. Learning to type should be a fun and rewarding experience.</p>
-        </div>
       </div>
-      <figure class="col-sm-6 col-lg-4"></figure>
-    </section>
-
-    <section id="section4" class="container-fluid">
-      <figure class="col-sm-6 col-lg-4 col-lg-offset-2"></figure>
-      <div class="feature-container col-sm-6 col-lg-4">
-        <div class="feature">
-          <h1>And better yet, it's free.</h1>
-          <p>We believe touch typing is a must-have skill for everybody in this day and age. So, what are you waiting for?</p>
-          <button class="btn btn-default btn-fb-login">Sign in with Facebook</button>
-          <a class="btn btn-default" href="paragraph.html">Try a demo</a>
-        </div>
-      </div>
-    </section>
+    </div>
+      
+  <div class="panel panel-success">
+    <div class="panel-heading">
+      <h3 class="panel-title">Activity log</h3>
+    </div>
+    <table class="table">
+      <tbody>
+        <tr>
+          <td>You completed <a id="exercise-name" href="<?php echo site_url("lesson/detail/10") ?>">Q and P</a> in <span id="exerise-time">2:43</span> with a CPM rate of <span id="exercise-cpm">100</span> and <span id="exercise-activity">100</span>% accuracy.</td>
+          <td><span id="log-time">09:10, 11 Dec 2013</span>
+        </tr>
+      </tbody>
+    </table>
   </main>
-
-  <div id="welcome-message" style="display:none;">
-    <h2>Welcome to Typing Tutor</h2>
-    <p>Tutorials for new visitors go here</p>
-    <a id="fvpp-close">✖</a>
-  </div>
+  
 </body>

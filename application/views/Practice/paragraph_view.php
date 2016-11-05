@@ -12,6 +12,11 @@
   <script src="<?php echo base_url('js/typing.js'); ?>"></script>
 </head>
 <body>
+  <script type="text/javascript">
+    var typeName = "practice";
+    var titleName = "<?php echo $paragraph['length']; ?>" + " words";
+    var titleId = "<?php echo $paragraph['length']; ?>";
+  </script>
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -80,7 +85,7 @@
     <div id="typing-panel" class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 panel panel-success pre-scrollable">
       <div class="panel-body">
         <textarea id="space-trick" autofocus="" style="opacity: 0; display:none"></textarea>
-        <samp id="typing-field"><span class="text-current" id="0"><?php echo $text[0]; ?></span><?php for ($i = 1; $i < strlen($text); $i++){ echo "<span id ='". $i ."'>" . $text[$i] . "</span>"; }?></samp>
+        <samp id="typing-field"><span class="text-current" id="0"><?php echo $text[0]; ?></span><?php for ($i = 1; $i < 10; $i++){ echo "<span id ='". $i ."'>" . $text[$i] . "</span>"; }?></samp>
       </div>
     </div>
     
