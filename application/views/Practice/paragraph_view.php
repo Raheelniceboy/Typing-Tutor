@@ -36,16 +36,16 @@
             <a href="<?php echo base_url('practice'); ?>">Practice</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="<?php echo base_url('about'); ?>">About</a>
           </li>
         </ul>
         <form class="nav navbar-form navbar-right">
           <div class="btn btn-primary btn-fb-login">Sign in</div>
         </form>
         <ul class="nav navbar-nav navbar-right" id="nav-profile">
-          <a href="me.html"><img class="fb-picture"/></a>
+          <a href="<?php echo base_url('me'); ?>"><img class="fb-picture"/></a>
           <li>
-            <a id="msg-logged-in" href="me.html"></a>
+            <a id="msg-logged-in" href="<?php echo base_url('me'); ?>"></a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->

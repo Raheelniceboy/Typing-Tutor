@@ -37,16 +37,16 @@
             <a href="<?php echo base_url('practice'); ?>">Practice</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="<?php echo base_url('about'); ?>">About</a>
           </li>
         </ul>
         <form class="nav navbar-form navbar-right">
           <div class="btn btn-primary btn-fb-login">Sign in</div>
         </form>
         <ul class="nav navbar-nav navbar-right" id="nav-profile">
-          <a href="me.html"><img class="fb-picture"/></a>
+          <a href="<?php echo base_url('me'); ?>"><img class="fb-picture"/></a>
           <li>
-            <a id="msg-logged-in" href="me.html"></a>
+            <a id="msg-logged-in" href="<?php echo base_url('me'); ?>"></a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
@@ -107,7 +107,7 @@
           <li id="key-0" class="key key-normal key-pinky key-right">0<sup> )</sup></li>
           <li id="key--" class="key key-normal key-pinky key-right">-<sup> _</sup></li>
           <li id="key-=" class="key key-normal key-pinky key-right">=<sup> +</sup></li>
-          <li id="key-backspace"" class="key">bksp</li>
+          <li id="key-backspace" class="key">bksp</li>
         </ul>
         <ul id="top-row">
           <li id="key-tab" class="key">tab</li>
