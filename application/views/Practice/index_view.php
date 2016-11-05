@@ -58,7 +58,7 @@
         <p>Hundreds of paragraphs, all taken from English-language classics. Hone your skills while enjoying the beauty of literature.</p>
         <p>How long would you like your paragraph to be?</p>
         <p>
-          <a class="btn btn-success" href="<?php echo base_url("practice/paragraph"); ?>">100 words</a> <a class="btn btn-warning" href="<?php echo base_url("practice/paragraph"); ?>">150 words</a> <a class="btn btn-danger" href="<?php echo base_url("practice/paragraph"); ?>">200 words</a>
+          <a class="btn btn-success" href="<?php echo base_url("practice/paragraph/100"); ?>">100 words</a> <a class="btn btn-warning" href="<?php echo base_url("practice/paragraph/150"); ?>">150 words</a> <a class="btn btn-danger" href="<?php echo base_url("practice/paragraph/200"); ?>">200 words</a>
         </p>
       </div>
     </div>

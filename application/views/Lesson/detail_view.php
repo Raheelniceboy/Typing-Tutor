@@ -173,7 +173,7 @@
         </div>
         <div class="modal-footer text-center">
           <a href="<?php echo base_url('lesson'); ?>" class="btn btn-danger">Back</a>
-          <a href="<?php echo base_url('lesson'); ?>"  class="btn btn-info">Practise again</a>
+          <a href=""  class="btn btn-info">Practise again</a>
           <button type="button" class="btn btn-success btn-share">Share on Facebook</button>
         </div>
       </div>
