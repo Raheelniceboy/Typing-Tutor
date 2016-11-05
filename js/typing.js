@@ -82,6 +82,7 @@ $(function() {
         if (ch == "" + text.charAt(current)) {
             $("#" + (current+1)).addClass("text-current");
             current++;
+            $("#cpm").text(Math.round(current / ((timer-start)/1000) * 60));
             if (current == text.length) {
                 var data = {
                     "time": $("#timer-minutes").text() + ":" + $("#timer-seconds").text(),
@@ -99,7 +100,6 @@ $(function() {
         else {
             $("#" + current).addClass("text-error");
         }
-        $("#cpm").text(Math.round(charsTyped / ((timer-start)/1000) * 60));
         $("#accuracy").text(Math.round(current / charsTyped * 100));
     };
 
@@ -109,7 +109,7 @@ $(function() {
         timer = (new Date).getTime();
         $("#timer-minutes").text(pad(Math.round((timer-start) / 1000 / 60)));
         $("#timer-seconds").text(pad(Math.round((timer-start) / 1000 % 60)));
-        $("#cpm").text(Math.round(charsTyped / ((timer-start)/1000) * 60));
+        $("#cpm").text(Math.round(current / ((timer-start)/1000) * 60));
     }
 
     var typing = false;
