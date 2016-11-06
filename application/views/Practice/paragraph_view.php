@@ -60,7 +60,7 @@
   </nav>
 
   <main class="container">
-    <h1 class="text-center">Typing practice</h1>
+    <h3 class="text-center">Typing practice</h3>
     <p class="text-center">Start typing when you're ready.</p>
     <div class="row">
       <div class="col-xs-6 col-sm-4">
@@ -88,7 +88,7 @@
     <div id="typing-panel" class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 panel panel-success pre-scrollable">
       <div class="panel-body">
         <textarea id="space-trick" autofocus="" style="opacity: 0; display:none"></textarea>
-        <samp id="typing-field"><span class="text-current" id="0"><?php echo $text[0]; ?></span><?php for ($i = 1; $i < 10; $i++){ echo "<span id ='". $i ."'>" . $text[$i] . "</span>"; }?></samp>
+        <samp id="typing-field"><span class="text-current" id="0"><?php echo $text[0]; ?></span><?php for ($i = 1; $i < strlen(trim($text)); $i++){ echo "<span id ='". $i ."'>" . $text[$i] . "</span>"; }?></samp>
       </div>
     </div>
     
@@ -108,13 +108,13 @@
           <li id="key-4" class="key key-normal key-index key-left">4<sup> $</sup></li>
           <li id="key-5" class="key key-normal key-index key-left">5<sup> %</sup></li>
           <li id="key-6" class="key key-normal key-index key-right">6<sup> ^</sup></li>
-          <li id="key-7" class="key key-normal key-index key-right">7<sup> &</sup></li>
+          <li id="key-7" class="key key-normal key-index key-right">7<sup> &amp;</sup></li>
           <li id="key-8" class="key key-normal key-middle key-right">8<sup> *</sup></li>
           <li id="key-9" class="key key-normal key-ring key-right">9<sup> (</sup></li>
           <li id="key-0" class="key key-normal key-pinky key-right">0<sup> )</sup></li>
           <li id="key--" class="key key-normal key-pinky key-right">-<sup> _</sup></li>
           <li id="key-=" class="key key-normal key-pinky key-right">=<sup> +</sup></li>
-          <li id="key-backspace"" class="key">bksp</li>
+          <li id="key-backspace" class="key">bksp</li>
         </ul>
         <ul id="top-row">
           <li id="key-tab" class="key">tab</li>

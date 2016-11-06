@@ -132,6 +132,11 @@ $(function() {
                     event.preventDefault();
                     checkChar(" ");
                     break;
+                case 222:
+                // Single quote - "Find in page" in Firefox
+                    event.preventDefault();
+                    checkChar("'");
+                    break;
                 case 9:
                 // Tab, will cause the hidden text area to lose focus, I think...
                 case 8:
