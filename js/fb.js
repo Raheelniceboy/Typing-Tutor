@@ -10,9 +10,9 @@ function getInfo() {
             
 
                 $("#msg-logged-in").text("Welcome, " + response.first_name);
-                 var st = "me/info/" + userId;
+                var st = base_url+ "me/info/" + userId;
                 $('#msg-logged-in').attr("href", st);    
-
+                $('#picture-logged-in').attr("href", st);
                 $("#name").text(response.name);
                 
                 

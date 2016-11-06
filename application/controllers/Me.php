@@ -30,9 +30,15 @@
 			}
 			
 			
+			if ($count > 0) {
+				$avg_cpm = round($count_cpm / $count, 2);
+				$avg_accuracy = round($count_accuracy / $count, 2);
+			}
+			else {
+				$avg_cpm = 0;
+				$avg_accuracy = 0;
+			}
 			
-			$avg_cpm = round($count_cpm / $count, 2);
-			$avg_accuracy = round($count_accuracy / $count, 2);
 			$data['word_typed'] = $word_typed;
 			$data['avg_cpm'] = $avg_cpm;
 			$data['avg_accuracy'] = $avg_accuracy;

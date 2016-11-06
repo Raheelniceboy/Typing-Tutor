@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="<?php echo base_url('css/typing.css'); ?>">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>var base_url = '<?php echo base_url() ?>';</script>
   <script src="<?php echo base_url('js/fb.js');?>"></script>
   <script src="<?php echo base_url('js/results.js'); ?>"></script>
   <script src="<?php echo base_url('js/typing.js'); ?>"></script>
@@ -49,9 +50,9 @@
           <div class="btn btn-primary btn-fb-login">Sign in</div>
         </form>
         <ul class="nav navbar-nav navbar-right" id="nav-profile">
-          <a href="<?php echo base_url('me'); ?>"><img class="fb-picture"/></a>
+          <a id="picture-logged-in" href="#"><img class="fb-picture"/></a>
           <li>
-            <a id="msg-logged-in" href="<?php echo base_url('me'); ?>"></a>
+            <a id="msg-logged-in" href="#"></a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
