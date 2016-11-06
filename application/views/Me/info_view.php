@@ -90,12 +90,12 @@
           <?php foreach ($log as $key) { ?>
           <?php if ($key['type'] == "lesson") { ?>
             <tr>
-              <td>You completed <a id="exercise-name" href="<?php echo site_url('lesson/detail/')?>"><?php echo $key['title'] ?></a> in <span id="exerise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
+              <td>You completed <a id="exercise-name" href="<?php echo site_url('lesson/detail/')?>"><?php echo $key['title'] ?></a> in <span id="exercise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
               <td><span id="log-time"><?php echo $key['date'] ?></span>
             </tr>
            <?php } else { ?>
               <tr>
-              <td>You completed <a id="exercise-name" href="<?php echo site_url('practice/paragraph/') . $key['title_id'] ?>"><?php echo $key['title'] ?></a> in <span id="exerise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
+              <td>You completed <a id="exercise-name" href="<?php echo site_url('practice/paragraph/') . $key['title_id'] ?>"><?php echo $key['title'] ?></a> in <span id="exercise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
               <td><span id="log-time"><?php echo $key['date'] ?></span>
             </tr>
            <?php } ?>

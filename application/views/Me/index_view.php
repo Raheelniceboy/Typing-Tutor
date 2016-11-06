@@ -89,7 +89,7 @@
     <table class="table">
       <tbody>
         <tr>
-          <td>You completed <a id="exercise-name" href="<?php echo site_url("lesson/detail/10") ?>">Q and P</a> in <span id="exerise-time">2:43</span> with a CPM rate of <span id="exercise-cpm">100</span> and <span id="exercise-activity">100</span>% accuracy.</td>
+          <td>You completed <a id="exercise-name" href="<?php echo site_url("lesson/detail/10") ?>">Q and P</a> in <span id="exercise-time">2:43</span> with a CPM rate of <span id="exercise-cpm">100</span> and <span id="exercise-activity">100</span>% accuracy.</td>
           <td><span id="log-time">09:10, 11 Dec 2013</span>
         </tr>
       </tbody>

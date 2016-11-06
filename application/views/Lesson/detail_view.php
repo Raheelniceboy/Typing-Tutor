@@ -62,6 +62,7 @@
 
   <main class="container">
     <h1 class="text-center">Typing practice</h1>
+    <p class="text-center">Start typing when you're ready.</p>
     <div class="row">
       <div class="col-xs-6 col-sm-4">
         <div class="panel panel-info">

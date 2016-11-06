@@ -5,6 +5,7 @@ $(function() {
     var totalChars = text.length;
     var start = 0;
     var timer = 0;
+    var done = false;
     var mapping = {
         "~": "`",
         "!": "1",
@@ -84,6 +85,8 @@ $(function() {
             current++;
             $("#cpm").text(Math.round(current / ((timer-start)/1000) * 60));
             if (current == text.length) {
+                done = true;
+                console.log(done);
                 var data = {
                     "time": $("#timer-minutes").text() + ":" + $("#timer-seconds").text(),
                     "cpm": $("#cpm").text(),
@@ -106,10 +109,12 @@ $(function() {
 // timer
     function pad ( val ) { return val > 9 ? val : "0" + val; }
     function setTime () {
-        timer = (new Date).getTime();
-        $("#timer-minutes").text(pad(Math.round((timer-start) / 1000 / 60)));
-        $("#timer-seconds").text(pad(Math.round((timer-start) / 1000 % 60)));
-        $("#cpm").text(Math.round(current / ((timer-start)/1000) * 60));
+        if (!done) {
+            timer = (new Date).getTime();
+            $("#timer-minutes").text(pad(Math.round((timer-start) / 1000 / 60)));
+            $("#timer-seconds").text(pad(Math.round((timer-start) / 1000 % 60)));
+            $("#cpm").text(Math.round(current / ((timer-start)/1000) * 60));
+        }
     }
 
     var typing = false;

@@ -38,6 +38,7 @@
 			$this->db->select('*');
 			$this->db->from('log');
 			$this->db->where('user_id', $user_id);
+			$this->db->order_by("date", "desc");
 			$query = $this->db->get();
 			return $query->result_array();
 		}
