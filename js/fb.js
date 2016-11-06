@@ -16,7 +16,7 @@ function getInfo() {
                 $("#name").text(response.name);
                 
                 
-                $.post("/user/save_user",
+                $.post(base_url + "/user/save_user",
                 {
                     user_id : response.id
                 },
@@ -81,7 +81,7 @@ window.fbAsyncInit = function() {
         $("#btn-logout").on("click", function() {
             FB.logout(function(response) {
             // user is now logged out
-                window.location = "/";
+                window.location = base_url;
             });
         });
     });
