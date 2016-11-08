@@ -30,7 +30,7 @@ Both sections of the document describe the same software product in its entirety
 
 ## Overall Description
 ### System Environment
-[Figure 1](/figures/figure1 "Figure 1 - System Environment")
+[Figure 1](https://github.com/ntgiang71096/Typing-Tutor/blob/master/documentation/requirements/figures/editor-use-case-1.PNG "Figure 1 - System Environment")
 
 The Web Typing Tutor System has two active actors including The User and The Editor. The User and Editor access the system through the Internet and login directly through the account registered using social network authentication.
 
@@ -38,6 +38,6 @@ The Web Typing Tutor System has two active actors including The User and The Edi
 
 This section outlines the use cases for each of the active users separately. The editor has only two use cases while the user is main actor in this system with 4 use cases.
 #### User Use Case
-[Figure 2](/figures/figure2 "Figure 2 - User Use Case")
+[Figure 2](./documentation/requirements/figures/editor-use-case-1.PNG "Figure 2 - User Use Case")
 
 ##### Use Case: Do Typing Excersise
