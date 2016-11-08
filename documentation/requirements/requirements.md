@@ -38,20 +38,23 @@ The Web Typing Tutor System has two active actors including The User and The Edi
 
 This section outlines the use cases for each of the active users separately. The editor has only two use cases while the user is main actor in this system with 4 use cases.
 #### User Use Case
-![Figure 2](./figures/figure2.png "Figure 2 - User Use Case")
+![Figure 2](./figures/figure2.PNG "Figure 2 - User Use Case")
 
 ##### Use Case: Do Typing Excersise
 **Diagram**:
-![User Use Case - Do Typing Excersise](.figures/user-use-case-1.png "User Use Case - Do Typing Excersise")
+
+![User Use Case - Do Typing Excersise](.figures/user-use-case-1.PNG "User Use Case - Do Typing Excersise")
+
 **Brief Description**
+
 The User does a typing excersise
+
 **Initial Step-by-Step Description**
+
 Before this use case can be initiated, the User has already selected a typing lesson or a paragraph.
-`
 1. The system presents a dialog that tells the user to begin typing.
 2. The User press Enter or click the OK button on the dialog.
 3. The system presents the content of the typing test in a text box, along with the keyboard guide and the user’s current statistics. The first character of the text is highlighted.
 4. The corresponding key in the keyboard is highlighted. If the user types the correct character, the next character is selected. Otherwise, the current character will be highlighted differently to reflect the error. This is repeated until there are no more characters.
 5. The system displays a dialog informing the user that he/she has completed the exercise.
 6. The user chooses to go back, practise again or share the progress on Facebook
-`
