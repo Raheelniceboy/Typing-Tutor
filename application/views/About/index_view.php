@@ -66,7 +66,7 @@
       <p>We are a team of five computer science majors at UET.</p>
       <h3>Nguyễn Trường Giang</h3>
       <p>As the leader of the team, Giang's contribution to the project is massive - he has done most of the back-end work. In addition to being 
-      a full-stack web developer, he is interested in Japanese culture, especially Japanese short films <i>*wink wink*</i>.</p>
+      a full-stack web developer, he is interested in Japanese culture, especially Japanese AntiVirus <i>*wink wink*</i>.</p>
       <h3>Phạm Nguyễn Hoàng</h3>
       <p>Hoàng is responsible for most of the project's Javascript code, as well as some of the website's content.</p>
       <h3>Lương Ngọc Huyền</h3>
@@ -75,7 +75,7 @@
       <p>The oldest member of the team, Quang's contributions include the <i>Basic lessons</i> page's layout, as well as the project's documentation.</p>
       <h3>Nguyễn Văn Tiến</h3>
       <p>A hard-working K59CA student and the team's secretary, Tiến has been diligently documenting every meeting. In addition, he helps out in various 
-      other parts of the project, including design and documentation.</p>
+      other parts of the project, including design and documentation, finding resources.</p>
     </section>
     
   </main>
