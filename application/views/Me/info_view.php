@@ -92,8 +92,22 @@
           </div>
           <table class="table">
             <tbody>
-              <tr><td><a href="<?php echo base_url('bubbles') ?>" style="text-decoration: none">Bubbles</a></td> <td>00:04</td></tr>
-              <tr><td><a href="<?php echo base_url('random') ?>" style="text-decoration: none">Random</a></td> <td>4</td></tr>
+              <tr><td><a href="<?php echo base_url('bubbles') ?>" style="text-decoration: none">Bubbles</a></td> <td>
+              <?php 
+              $point = $bubbles_point['point'];
+                    $sec = $point % 60;
+                    $min = floor($point / 60);
+                    $st_sec = (string)$sec;
+                    $st_min = (string)$min;
+                    if ($min < 10){
+                      $st_min = '0' . $st_min;
+                    }
+                    if ($sec < 10){
+                      $st_sec = '0' . $st_sec;
+                    }
+                    echo $st_min . ":" . $st_sec;
+               ?></td></tr>
+              <tr><td><a href="<?php echo base_url('random') ?>" style="text-decoration: none">Random</a></td> <td><?php echo $random_point['point'];  ?></td></tr>
             </tbody>
           </table>
         </div>

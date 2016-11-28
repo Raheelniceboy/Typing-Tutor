@@ -15,6 +15,8 @@
 			$data = array();
 			$user_id = $this->uri->segment(3);
 			$log = $this->User_model->get_log($user_id);
+			$data['bubbles_point'] = $this->User_model->get_point($user_id, "Bubbles");
+			$data['random_point'] = $this->User_model->get_point($user_id, "Random");
 			$data['log'] = $log;
 			$word_typed = 0;
 			$count = 0;

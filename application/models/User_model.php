@@ -51,14 +51,33 @@
 		{
 			$this->db->select('user_id, point, user_name');
 			$this->db->from('log_game');
-			if ($game_name = "Bubbles"){
+			$this->db->where('game_name', $game_name);
+			if ($game_name == "Bubbles"){
 				$this->db->order_by('point',"asc");	
 			}
 			$this->db->order_by('point',"desc");
-			$this->db->where('game_name', $game_name);
+			
 			$query = $this->db->get();
 			$list = $query->result_array();
 			return $list;
+		}
+		function get_point($user_id, $game_name)
+		{
+			$this->db->select('point');
+			$this->db->from('log_game');
+			$this->db->where('user_id', $user_id);
+			$this->db->where('game_name', $game_name);
+			if ($game_name == "Bubbles"){
+				$this->db->order_by('point', 'asc');
+			}
+			$this->db->order_by('point', 'desc');
+			
+			$query = $this->db->get();
+			$list = $query->result_array();
+			if (count($list) == 0){
+				return 0;
+			}
+			return $list['0'];
 		}
 	}
 ?>

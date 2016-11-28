@@ -8,6 +8,7 @@
 			$this->load->model('User_model');
 			$data= array();
 			$data['top'] = $this->User_model->get_top_player('Random');
+			
 			// $data['t'] = '1';
 			// print_r($data['top']);
 			// print_r($data['top'][0]) ;
