@@ -41,7 +41,7 @@ $(function() {
                         user_name: userName,
                         user_id : userId,
                         game_name : "Bubbles",
-                        point : $("#timer").text()
+                        point : Math.round((timer-start) / 1000)
                     },
                     function(data, status){
                         console.log("posted");
