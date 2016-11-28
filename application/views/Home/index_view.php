@@ -40,6 +40,7 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Game <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="<?php echo base_url('bubbles'); ?>">Bubbles</a></li>
+                <li><a href="<?php echo base_url('random'); ?>">Random</a></li>
             </ul>
           </li>
           <li>
@@ -104,10 +105,4 @@
       </div>
     </section>
   </main>
-
-  <div id="welcome-message" style="display:none;">
-    <h2>Welcome to Typing Tutor</h2>
-    <p>Tutorials for new visitors go here</p>
-    <a id="fvpp-close">✖</a>
-  </div>
 </body>

@@ -41,7 +41,8 @@
           <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="<?php echo base_url('bubbles'); ?>">Bubbles</a></li>
+              <li><a href="<?php echo base_url('bubbles'); ?>">Bubbles</a></li>
+              <li><a href="<?php echo base_url('random'); ?>">Random</a></li>
             </ul>
           </li>
           <li>
@@ -66,9 +67,9 @@
     <h2>Type all lowercase letters of the alphabet, one by one</h2>
     <p>Start typing when you're ready!</p>
     <div class="row">
-      <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 panel panel-info">
+      <div class="col-sm-8 col-md-6 col-lg-4 col-sm-offset-2 col-md-offset-3 col-lg-offset-4 panel panel-info">
           <div class="panel-body text-center">
-            Time:<span id="timer-text"><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></span>
+            Time: <span id="timer-text"><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></span>
           </div>
       </div>
     </div>

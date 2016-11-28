@@ -12,12 +12,8 @@ $(function() {
             setInterval(setTime, 1000);
         }
         switch (event.keyCode) {
-            case 32:
-            case 222:
-            case 9:
-            case 8:
+            case 32, 222, 9, 8:
                 event.preventDefault();
-            default:
                 break;
         }
     }

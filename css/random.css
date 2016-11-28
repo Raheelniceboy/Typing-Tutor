@@ -1,0 +1,13 @@
+/* Prevent the user from selecting any text */
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#text-input {
+    margin-bottom: 1em;
+}

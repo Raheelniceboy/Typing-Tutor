@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <head>
-  <title>Typing Tutor - Profile</title>
+  <title>Typing Tutor - Bubbles</title>
   <meta charset="utf-8">
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">  
   <link rel="stylesheet" href="<?php echo base_url('css/theme.css'); ?>">
-  <link rel="stylesheet" href="<?php echo base_url('css/typing.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url('css/random.css'); ?>">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="<sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l></sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l>2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script>var base_url = '<?php echo base_url() ?>';</script>
+  <script>var base_url = '<?php echo base_url() ?>';</script>   
   <script src="<?php echo base_url('js/fb.js');?>"></script>
+  <script src="<?php echo base_url('js/random.js');?>"></script>  
 </head>
 <body>
   
@@ -37,7 +38,7 @@
           <li>
             <a href="<?php echo base_url('practice'); ?>">Practice</a>
           </li>
-          <li class="dropdown">
+          <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="<?php echo base_url('bubbles'); ?>">Bubbles</a></li>
@@ -53,64 +54,65 @@
         </form>
         <ul class="nav navbar-nav navbar-right" id="nav-profile">
           <a id="picture-logged-in" href="#"><img class="fb-picture"/></a>
-          <li class="active">
+          <li>
             <a id="msg-logged-in" href="#"></a>
           </li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
+
   
-  
-  
-  <main class="container">
-    <div class="well row">
-      <div class="col-md-6">
-        <div><img class="fb-picture img-responsive img-thumbnail center-block"/></div>
-        <div class="text-center">
-          <h3 id="name"></h3> 
-          <a id="btn-logout" class="btn btn-danger">Sign out</a>
+  <div class="modal fade" id="modal-intro">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">How to play</h4>
+        </div>
+        <div class="modal-body">
+          <p>A random string of characters will appear on the page. Your task is to type that string into the box and press Enter before the time runs out.</p>
+          <p>If you submit the wrong string or the time is up, you lose the game.</p>
+          <p>It'll get harder and harder, so be prepared!</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Your stats</h3>
-          </div>
-          <table class="table">
-            <tbody>
-              <tr><td>Words typed (Only for practice mode)</td> <td><span id="words-typed"><?php echo $word_typed ?></span></td></tr>
-              <tr><td>Average CPM</td>  <td><span id="average-cpm"><?php echo $avg_cpm ?></span></td></tr>
-              <tr><td>Accuracy</td> <td><span id="accuracy"><?php echo $avg_accuracy; ?></span>%</td></tr>
-            </tbody>
-          </table>
-      </div>
-      </div>
     </div>
-      
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h3 class="panel-title">Activity log</h3>
-    </div>
-    <table class="table">
-      <tbody>
-          <?php foreach ($log as $key) { ?>
-          <?php if ($key['type'] == "lesson") { ?>
-            <tr>
-              <td>You completed <a id="exercise-name" href="<?php echo site_url('lesson/detail/')?><?php echo $key['title_id']?>"><?php echo $key['title'] ?></a> in <span id="exercise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
-              <td><span id="log-time"><?php echo $key['date'] ?></span>
-            </tr>
-           <?php } else { ?>
-              <tr>
-              <td>You completed <a id="exercise-name" href="<?php echo site_url('practice/paragraph/') . $key['title_id'] ?>"><?php echo $key['title'] ?></a> in <span id="exercise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
-              <td><span id="log-time"><?php echo $key['date'] ?></span>
-            </tr>
-           <?php } ?>
-          <?php } ?>
-     
-      </tbody>
-    </table>
-
-  </main>
+  </div>
   
+  
+
+  <main class="container text-center">
+    <p>Press any key when you're ready!</p>
+    <h3>Level <span id="level">1</span></h3>
+    <h2 id="timer">0</h2>
+    <h2 id="text-game"></h2>
+    <form id="game-form" autocomplete="off" role="form">
+      <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+        <input type="text" class="form-control" id="text-input"
+        placeholder="Type your text here!">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>    
+    </form>
+  </main>
+
+  <div class="modal fade" id="modal-over" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Game over</h4>
+        </div>
+        <div class="modal-body">
+          <p id="modal-message"></p>
+        </div>
+        <div class="modal-footer text-center">
+          <a href="<?php echo base_url(); ?>" class="btn btn-danger">Back</a>
+          <a href="<?php echo base_url('random'); ?>"  class="btn btn-info">Play again</a>
+          <button type="button" class="btn btn-success btn-share">Share on Facebook</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
