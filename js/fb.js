@@ -6,8 +6,8 @@ function getInfo() {
         function (response) {
             if (response && !response.error) {
                 userId = response.id;
-               
-            
+                userName = response.first_name;               
+                console.log(userName);
 
                 $("#msg-logged-in").text("Welcome, " + response.first_name);
                 var st = base_url+ "me/info/" + userId;

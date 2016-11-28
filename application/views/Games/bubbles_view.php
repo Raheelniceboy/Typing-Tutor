@@ -12,7 +12,7 @@
   <script src="<?php echo base_url('js/bubbles.js');?>"></script>  
 </head>
 <body>
-  
+
 
   
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">

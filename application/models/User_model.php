@@ -27,11 +27,16 @@
 				);
 			$this->db->insert('user',$data);
 		}
-
+		// Log for typing
 		function save_log($data)
 		{
 			$this->db->set('date', 'NOW()', FALSE);
 			$this->db->insert('log', $data);
+		}
+		// Log for game
+		function save_game_log($data)
+		{
+			$this->db->insert('log_game', $data);
 		}
 		function get_log($user_id)
 		{
@@ -41,6 +46,16 @@
 			$this->db->order_by("log_id", "desc");
 			$query = $this->db->get();
 			return $query->result_array();
+		}
+		function get_top_player($game_name)
+		{
+			$this->db->select('user_id, point, user_name');
+			$this->db->from('log_game');
+			$this->db->order_by('point',"desc");
+			$this->db->where('game_name', $game_name);
+			$query = $this->db->get();
+			$list = $query->result_array();
+			return $list;
 		}
 	}
 ?>

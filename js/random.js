@@ -1,6 +1,6 @@
 $(function() {
     $("#modal-intro").modal("show");
-
+    
     var lowercase = "abcdefghijklmnopqrstuvwxyz";
     var alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var alphanumeric = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
@@ -94,8 +94,21 @@ $(function() {
 
     function gameOver() {
         typing = false;
+        
         $("#modal-message").text("You reached level " + level + "!");
         $("#modal-over").modal("show");
+
+        // post result to DB
+         $.post(base_url + "/user/save_game_log",
+        {
+            user_name : userName,
+            user_id : userId,
+            game_name : "Random",
+            point : level
+        },
+        function(data, status){
+            console.log("posted");
+        });
     }
 
 // Returns a random integer between min (included) and max (excluded)

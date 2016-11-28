@@ -23,6 +23,7 @@
 				$this->User_model->save_user_id($user_id);	
 			}
 		}
+		// Log for typing
 		public function save_log(){
 			$data = array();
 			$data['user_id'] = $this->input->post('user_id');
@@ -35,6 +36,17 @@
 
 
 			$this->User_model->save_log($data);
+		}
+		// Log for game
+		public function save_game_log(){
+			$data = array();
+			$data['user_id'] = $this->input->post('user_id');
+			$data['user_name'] = $this->input->post('user_name');
+			$data['game_name'] = $this->input->post('game_name');
+			$data['point'] = $this->input->post('point');
+
+
+			$this->User_model->save_game_log($data);
 		}
 	}
  ?>

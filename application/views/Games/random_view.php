@@ -79,7 +79,18 @@
             </div>
             <table class="table">
               <tbody>
-                <tr><td>ajflkjad</td> <td>34</td></tr>
+                <?php 
+                  $length = 3;
+                  if (count($top) < 3) {
+                    $length = count($top);
+                  }
+                  for ($i = 0; $i < $length; $i++) {
+                  echo "<tr><td>";
+                   print_r($top[$i]['user_name']);
+                    echo"</td><td>";
+                    print_r($top[$i]['point']);
+                    echo"</td></tr>";
+                  } ?>
               </tbody>
             </table>
           </div>

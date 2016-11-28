@@ -1,3 +1,4 @@
+
 $(function() {
     $("#modal-intro").modal("show");
     var typing = false;
@@ -19,6 +20,7 @@ $(function() {
         }
     }
     $(document).keypress(function(event) {
+
         if (typing) {
             var ch = String.fromCharCode(event.which);
             if (ch == alphabet.charAt(current)) {
@@ -27,8 +29,23 @@ $(function() {
                     // success
                     done = true;
                     var message = "You finished this game in " + $("#timer-text").text() + "!";
+                    console.log($("#timer-text"));
                     $("#modal-message").text(message);
                     $("#modal-success").modal("show");
+
+                     // post result to DB
+                     
+
+                     $.post(base_url + "/user/save_game_log",
+                    {
+                        user_name: userName,
+                        user_id : userId,
+                        game_name : "Bubbles",
+                        point : $("#timer").text()
+                    },
+                    function(data, status){
+                        console.log("posted");
+                    });
                 }
                 else {
                     $("#" + alphabet.charAt(current + 1)).addClass("current");

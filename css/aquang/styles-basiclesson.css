@@ -1,0 +1,517 @@
+/* General */ 
+.avatar-img {
+	display: inline-block;
+    border-radius: 100px;
+    margin: 0 auto; 
+    text-align: center;
+}
+
+/* step counter */ 
+.step-counter {
+	font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    margin-right: 10px;
+    text-align: center;
+
+    background-color: #20a8e9;
+    background-image: linear-gradient(to bottom, #20a8e9, rgba(30,158,220,0.5));
+    
+    border-radius: 20px 60px 60px 20px;
+}
+
+
+/* Msgs & Errors */ 
+.errorlist { /* errorlist is named by django form errors */
+	list-style: none;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.error, .errorlist {
+	color: red;
+}
+
+.success-msg, 
+.msg-to-customer { /* Note: if using msg-to-customer, the page will auto scroll to that class */ 
+	max-width: 500px;
+    margin: 20px auto;
+    text-align: center;
+    
+    color: #333;
+    background-color: yellow;
+    
+    padding: 10px 15px;
+    border-radius: 10px;
+   
+    font-size: 16px;
+    
+}
+
+.success {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: blue;
+}
+
+/* upgrade account */ 
+.activate-trial-msg-wrapper,
+.upgrade-account-msg-wrapper, 
+.show-hotline-wrapper {
+	max-width: 100%; 
+	font-size: 20px; 
+	margin: 0; 
+	text-align: center;
+	border-radius: 0;
+}
+
+.show-hotline-wrapper .text {
+    padding: 10px 25px 5px;
+    color: #fff;
+    font-size: 16px;
+    background: #83cd2b;
+    border-radius: 10px;
+}
+
+.show-hotline-wrapper .phone {
+	display: inline-block;
+    max-width: 20px;
+    margin: 0 3px 0 5px;
+}
+.upgrade-account-msg-wrapper {
+	color: #fff;
+    background-color: #2275D1;
+}
+.upgrade-account-msg-wrapper a {
+	color: yellow; 
+}
+
+.activate-trial-msg-wrapper.absolute,
+.upgrade-account-msg-wrapper.absolute {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/* renew account */
+.renew-account-msg-wrapper {
+	margin: 0;
+	text-align: center;
+}
+
+.renew-account-msg-wrapper .promotion {    
+    max-width: 640px;
+    margin: 30px auto;
+    border-radius: 20px;
+    background: yellow;
+    padding: 15px 0;
+    font-size: 24px;
+}
+
+.renew-account-msg-wrapper .promotion .pricing {
+	margin-bottom: 15px;
+	font-size: 24px;
+	color: #F77020;
+}
+
+.renew-account-msg-wrapper .pricing .promotion-value {
+	font-weight: bold;
+}
+
+.renew-account-msg-wrapper .pricing .expiry-time {
+	font-size: 18px;
+    color: #333;
+}
+
+.renew-account-msg-wrapper .submit-btn {
+    max-width: 440px;
+    margin: 0 auto;	
+}
+
+
+/* buttons & colors */ 
+.submit-btn { /* blue style */
+    display: block;
+    padding: 12px 20px;
+	
+	color: #fff;
+	background-color: #2275D1;
+	
+	border: 1px solid transparent;
+	    
+    font-size: 20px;
+    line-height: 25px;
+    
+    text-align: center;
+    text-decoration: none;
+    
+    outline: none;
+    position: relative;
+    border-radius: 5px;
+}
+
+a.submit-btn {
+	color: #fff;
+}
+
+.submit-btn:hover {
+	cursor: pointer;
+	background-color: #2882e7;
+	text-decoration: none;
+}
+
+a.submit-btn:hover {
+	/*color: #23527c; 
+	font-weight: bolder;*/
+	text-decoration: none;
+}
+
+
+.oval-btn {
+	border-radius: 24px;
+}
+
+.circle {
+	border-radius: 100% 100%;
+	padding: 5px 15px;
+	display: inline-block;
+}
+
+.red-btn {
+	background-color: #e10;
+}
+
+.red-btn:hover {
+	background-color: #FA3B2C;
+}
+
+.green-btn {
+	background-color: #83cd2b;
+	background-image: linear-gradient(-180deg, #83CD2B 0%, #7EC826 100%);
+}
+.green-btn:hover {
+	background-color: #7ED615; /*#9AD14C; /*#A2DF4D;*/
+	background-image: none;
+}
+
+.nav-color-btn {
+	background-color: #009130;
+}
+
+.nav-color-btn:hover {
+	background: inherit;
+}
+
+.orange-btn {
+	background-color: #F77020;
+}
+.orange-btn:hover {
+	background-color: #FB843C;
+}
+
+.pink-btn {
+	background: #f0494f;
+    box-shadow: inset 0 -4px #b4373b;
+}
+.pink-btn:hover {
+    background: #f15056;
+    box-shadow: inset 0 -4px #b4373b;
+}
+
+/* Common shortcuts */
+
+.inline {
+	display: inline-block;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+/* Colors */ 
+.white-color {
+	color: #fff;
+}
+.red-color {
+	color: #e10;
+}
+
+.blue-color {
+	color: #1c94c4; /*#0099CC; /* #0098c3;*/
+}
+
+.self-study-plan-color, .orange-color {
+	color: #F77020;
+}
+
+.full-support-plan-color, .green-color {
+	color: #83cd2b;
+}
+
+.pink-color {
+	color: #f0494f;
+}
+
+.orange-background {
+	background-color: #F77020;
+	background-image: linear-gradient(to bottom, #F77020, rgba(246,137,72,0.5));
+}
+.blue-background {
+	background-color: #20a8e9;
+    background-image: linear-gradient(to bottom, #20a8e9, rgba(30,158,220,0.5));
+}
+
+.red-background {
+	background-color: #e10;
+	background-image: linear-gradient(to bottom, #FA3B2C, #e10);
+}
+
+.green-background {
+	background-color: #83cd2b;
+	background-image: linear-gradient(-180deg, #83CD2B 0%, #7EC826 100%);
+}
+	
+
+/* horizontal line */ 
+.faded {
+	clear: both;
+    float: none;
+    width: 85%;
+    height: 1px;
+    margin: 60px auto;
+    border: none;
+    background: #ddd;
+    background-image: -webkit-gradient(linear,left bottom,right bottom,color-stop(0,rgb(255,255,255)),color-stop(0.1,rgb(221,221,221)),color-stop(0.9,rgb(221,221,221)),color-stop(1,rgb(255,255,255)) );
+    background-image: -moz-linear-gradient(left center,rgb(255,255,255) 0%,rgb(221,221,221) 10%,rgb(221,221,221) 90%,rgb(255,255,255) 100% );
+}
+
+/* Payment: these info can be included in any page */ 
+.pricing .plan-price {
+	display: inline-block;
+    margin: 0 20px 30px 20px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #666;
+	vertical-align: top;
+
+}
+
+.pricing .plan-price .promotion-expiry-time {
+	font-size: 80%;
+    color: #e10;
+    display: block;
+    margin-top: 15px;
+}
+
+.pricing .plan-price .self-study-plan-color, 
+.pricing .plan-price .full-support-plan-color {
+	font-size: 30px; 
+	margin-bottom: 15px;
+}
+
+.pricing .plan-price a {
+	color: inherit;
+	text-decoration: none;
+}
+
+    
+.pricing .or-label {
+	padding: 0 5px;
+	color: #F77020;
+}
+
+.pricing .old-value {
+	text-decoration: line-through;
+}
+
+.pricing .promotion-price {
+	color: #F77020;
+	font-weight: bold;
+}
+
+
+/* Instruction tooltips */
+/* To use this, set "position: relative" to the container containing this instruction */
+.instruction {
+	text-align: center;
+    font-size: 18px;
+    line-height: 27px;
+    
+    color: #fff;
+   	background-color: #83cd2b;
+	/*background-image: linear-gradient(to bottom, #83cd2b, rgba(142,224,44,0.5));*/
+   
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    
+    text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+    box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;
+    
+}
+
+.instruction:after{ /*instruction on the right */ 
+    content: '';
+    display: block;
+    width:0;
+    height:0;
+    
+    position: absolute;
+    
+    left: -20px;
+    top: 25px;
+    
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #83cd2b;;
+    
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #83cd2b transparent transparent;
+}
+
+.instruction-left:after{
+	border-color: transparent transparent transparent #83cd2b;
+}
+
+.instruction-top:after{
+	border-color: #83cd2b transparent transparent transparent;
+}
+
+.instruction-bottom:after{
+	border-color: transparent transparent  #83cd2b transparent;
+}
+
+/* Dialog */ 
+#dialog {
+	text-align: center;
+}
+#dialog .faq {
+	display: none;
+	font-size: 24px;
+    line-height: 30px;
+}
+
+#dialog .start-btn {
+	color: #fff;
+    font-size: 24px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#dialog .faq .title {
+	margin-bottom: 20px;
+}
+
+#dialog .faq ul {
+	list-style: none;
+}
+#dialog .faq ul li {
+	margin-bottom: 10px;
+}
+
+/*Feedback page */ 
+.feedback-playfield {
+	padding: 30px 80px 60px;
+}
+
+.feedback-section {
+	max-width: 600px;
+	margin: 30px auto 0;
+}
+
+.feedback-wrapper, .mobile-email-wrapper {
+	margin-bottom: 20px;
+}
+
+.feedback-section .mobile-wrapper, .feedback-section .email-wrapper {
+	margin-bottom: 10px;
+} 
+
+.feedback-section label {
+	display: inline-block;
+	width: 120px; 
+	text-align: right;
+}
+
+.mobile-email-wrapper input {
+	width: 200px;
+}
+
+.feedback-section .feedback-btn {
+	display: block;
+	margin-left: 120px;
+
+}
+
+.feedback-playfield .thankyou-msg, .feedback-section .errorlist {
+	text-align: center;
+}
+
+.feedback-section .msg-feedback-sent {
+	margin: 20px auto;
+	max-width: 450px;
+	text-align: center;
+	background-color: yellow;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.feedback-channels {
+	margin-top: 60px;
+}
+
+.channels-listing {
+	margin-left: 40px;
+}
+
+.channels-listing li {
+	line-height: 30px;
+}
+
+.channel-value {
+	font-weight: bold;
+    font-size: 18px;
+}
+
+@media (max-width: 980px) {
+	.upgrade-account-msg-wrapper.absolute  {
+		position: relative; 
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 767px) {
+	.feedback-playfield {
+		padding: 20px;
+	}
+	
+	.feedback-section, 
+	.feedback-wrapper textarea {
+		max-width: 100%;
+	}
+	
+	.mobile-email-wrapper input {
+		width: auto;
+	}
+	
+	.feedback-section .feedback-btn {
+		margin-left: 0;
+	}
+	.channels-listing {
+		margin-left: 20px;
+	}
+	
+	.show-hotline-wrapper .text {
+		padding: 10px 5px 5px;
+	}
+			
+}
+
+
+
+
