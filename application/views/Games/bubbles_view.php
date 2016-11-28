@@ -77,8 +77,31 @@
               <h3 class="panel-title">Top players</h3>
             </div>
             <table class="table">
-              <tbody>
-                <tr><td>kgjalkjfklasj</td> <td><span id="words-typed">00:06</span></td></tr>
+               <tbody>
+                <?php 
+                  $length = 3;
+                  if (count($top) < 3) {
+                    $length = count($top);
+                  }
+                  for ($i = 0; $i < $length; $i++) {
+                  echo "<tr><td>";
+                   print_r($top[$i]['user_name']);
+                    echo"</td><td>";
+                    // print_r($top[$i]['point']);
+                    $point = $top[$i]['point'];
+                    $sec = $point % 60;
+                    $min = floor($point / 60);
+                    $st_sec = (string)$sec;
+                    $st_min = (string)$min;
+                    if ($min < 10){
+                      $st_min = '0' . $st_min;
+                    }
+                    if ($sec < 10){
+                      $st_sec = '0' . $st_sec;
+                    }
+                    echo $st_min . ":" . $st_sec;
+                    echo"</td></tr>";
+                  } ?>
               </tbody>
             </table>
           </div>

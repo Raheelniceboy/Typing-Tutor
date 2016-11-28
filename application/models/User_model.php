@@ -51,6 +51,9 @@
 		{
 			$this->db->select('user_id, point, user_name');
 			$this->db->from('log_game');
+			if ($game_name = "Bubbles"){
+				$this->db->order_by('point',"asc");	
+			}
 			$this->db->order_by('point',"desc");
 			$this->db->where('game_name', $game_name);
 			$query = $this->db->get();
