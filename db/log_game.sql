@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 28, 2016 at 04:27 PM
+-- Generation Time: Nov 28, 2016 at 05:02 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.5.35
 
@@ -39,14 +39,15 @@ CREATE TABLE `log_game` (
 --
 
 INSERT INTO `log_game` (`log_id`, `user_id`, `user_name`, `game_name`, `point`) VALUES
-(1, '1804792313100351', '', 'Bubbles', 0),
-(2, '1804792313100351', '', 'Bubbles', 0),
-(3, '1804792313100351', 'Trường Giang', 'Bubbles', 0),
 (4, '1804792313100351', 'Trường Giang', 'Random', 4),
 (5, '1804792313100351', 'Trường Giang', 'Random', 6),
 (6, '1804792313100351', 'Trường Giang', 'Random', 3),
 (7, '1804792313100351', 'Trường Giang', 'Random', 3),
-(8, '1804792313100351', 'Trường Giang', 'Random', 5);
+(8, '1804792313100351', 'Trường Giang', 'Random', 5),
+(9, '1804792313100351', 'Trường Giang', 'Random', 1),
+(10, '1804792313100351', 'Trường Giang', 'Bubbles', 10),
+(11, '1804792313100351', 'Trường Giang', 'Bubbles', 10),
+(12, '1804792313100351', 'Trường Giang', 'Bubbles', 12);
 
 --
 -- Indexes for dumped tables
@@ -66,7 +67,7 @@ ALTER TABLE `log_game`
 -- AUTO_INCREMENT for table `log_game`
 --
 ALTER TABLE `log_game`
-  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `log_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
