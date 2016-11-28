@@ -120,36 +120,36 @@ $(function() {
     var typing = false;
 // Starts timer when the user starts typing
 // Key event handler
-        window.onkeydown = function(event) {
-            if (typing == false) {
-                typing = true;
-                start = (new Date).getTime();
-                setInterval(setTime, 1000);
-            }
-            switch(event.keyCode) {
-                case 32: 
-                // Space, will scroll the page if not caught
-                    event.preventDefault();
-                    checkChar(" ");
-                    break;
-                case 222:
-                // Single quote - "Find in page" in Firefox
-                    event.preventDefault();
-                    checkChar("'");
-                    break;
-                case 9:
-                // Tab, will cause the hidden text area to lose focus, I think...
-                case 8:
-                // Backspace, will go to the previous page.
-                    event.preventDefault();
-                    break;
-                default:
-                    break;
-            }
+    window.onkeydown = function(event) {
+        if (!typing) {
+            typing = true;
+            start = (new Date).getTime();
+            setInterval(setTime, 1000);
         }
-        $(document).keypress(function(event) {
-            checkChar(String.fromCharCode(event.which));
-        });
+        switch(event.keyCode) {
+            case 32: 
+            // Space, will scroll the page if not caught
+                event.preventDefault();
+                checkChar(" ");
+                break;
+            case 222:
+            // Single quote - "Find in page" in Firefox
+                event.preventDefault();
+                checkChar("'");
+                break;
+            case 9:
+            // Tab, will cause the hidden text area to lose focus, I think...
+            case 8:
+            // Backspace, will go to the previous page.
+                event.preventDefault();
+                break;
+            default:
+                break;
+        }
+    }
+    $(document).keypress(function(event) {
+        checkChar(String.fromCharCode(event.which));
+    });
 
 // Focus trick by Giang
     $("#typing-field").click(function(){

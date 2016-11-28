@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="<?php echo base_url('css/theme.css'); ?>">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="<sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l></sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l>2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>var base_url = '<?php echo base_url() ?>';</script>   <script src="<?php echo base_url('js/fb.js');?>"></script>
+  <script>var base_url = '<?php echo base_url() ?>';</script>
+  <script src="<?php echo base_url('js/fb.js');?>"></script>
 </head>
 <body>
   
@@ -35,7 +36,7 @@
           <li>
             <a href="<?php echo base_url('practice'); ?>">Practice</a>
           </li>
-          <li>
+          <li class="active">
             <a href="<?php echo base_url('about'); ?>">About</a>
           </li>
         </ul>

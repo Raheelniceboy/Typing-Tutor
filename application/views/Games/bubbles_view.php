@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <head>
-  <title>Typing Tutor - Profile</title>
+  <title>Typing Tutor - Bubbles</title>
   <meta charset="utf-8">
   <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-h21C2fcDk/eFsW9sC9h0dhokq5pDinLNklTKoxIZRUn3+hvmgQSffLLQ4G4l2eEr" crossorigin="anonymous">  
   <link rel="stylesheet" href="<?php echo base_url('css/theme.css'); ?>">
-  <link rel="stylesheet" href="<?php echo base_url('css/typing.css'); ?>">
+  <link rel="stylesheet" href="<?php echo base_url('css/bubbles.css'); ?>">
   <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="<sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l></sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l>2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script>var base_url = '<?php echo base_url() ?>';</script>
+  <script>var base_url = '<?php echo base_url() ?>';</script>   
   <script src="<?php echo base_url('js/fb.js');?>"></script>
+  <script src="<?php echo base_url('js/bubbles.js');?>"></script>  
 </head>
 <body>
   
@@ -37,7 +38,7 @@
           <li>
             <a href="<?php echo base_url('practice'); ?>">Practice</a>
           </li>
-          <li class="dropdown">
+          <li class="dropdown active">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="<?php echo base_url('bubbles'); ?>">Bubbles</a></li>
@@ -52,7 +53,7 @@
         </form>
         <ul class="nav navbar-nav navbar-right" id="nav-profile">
           <a id="picture-logged-in" href="#"><img class="fb-picture"/></a>
-          <li class="active">
+          <li>
             <a id="msg-logged-in" href="#"></a>
           </li>
         </ul>
@@ -60,56 +61,74 @@
     </div>
   </nav>
   
-  
-  
-  <main class="container">
-    <div class="well row">
-      <div class="col-md-6">
-        <div><img class="fb-picture img-responsive img-thumbnail center-block"/></div>
-        <div class="text-center">
-          <h3 id="name"></h3> 
-          <a id="btn-logout" class="btn btn-danger">Sign out</a>
+
+  <main class="container text-center">
+    <h2>Type all lowercase letters of the alphabet, one by one</h2>
+    <p>Start typing when you're ready!</p>
+    <div class="row">
+      <div class="col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3 panel panel-info">
+          <div class="panel-body text-center">
+            Time:<span id="timer-text"><span id="timer-minutes">00</span>:<span id="timer-seconds">00</span></span>
+          </div>
+      </div>
+    </div>
+    <ul class="letter-row">
+      <li id="a" class="current">a</li>
+      <li id="b">b</li>
+      <li id="c">c</li>
+      <li id="d">d</li>
+      <li id="e">e</li>
+      <li id="f">f</li>
+    </ul>
+    <ul class="letter-row">
+      <li class="dummy-block">1</li>
+      <li id="q">q</li>
+      <li id="r">r</li>
+      <li id="s">s</li>
+      <li id="t">t</li>
+      <li id="g">g</li>
+    </ul>
+    <ul class="letter-row">
+      <li class="dummy-block">2</li>
+      <li id="p">p</li>
+      <li id="y">y</li>
+      <li id="z">z</li>
+      <li id="u">u</li>
+      <li id="h">h</li>
+    </ul>
+    <ul class="letter-row">
+      <li class="dummy-block">3</li>
+      <li id="o">o</li>
+      <li id="x">x</li>
+      <li id="w">w</li>
+      <li id="v">v</li>
+      <li id="i">i</li>
+    </ul>
+    <ul class="letter-row">
+      <li class="dummy-block">4</li>
+      <li id="n">n</li>
+      <li id="m">m</li>
+      <li id="l">l</li>
+      <li id="k">k</li>
+      <li id="j">j</li>
+    </ul>
+  </main>
+
+  <div class="modal fade" id="modal-success" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Congratulations!</h4>
+        </div>
+        <div class="modal-body">
+          <p id="modal-message"></p>
+        </div>
+        <div class="modal-footer text-center">
+          <a href="<?php echo base_url(); ?>" class="btn btn-danger">Back</a>
+          <a href="<?php echo base_url('bubbles'); ?>"  class="btn btn-info">Play again</a>
+          <button type="button" class="btn btn-success btn-share">Share on Facebook</button>
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="panel panel-primary">
-          <div class="panel-heading">
-            <h3 class="panel-title">Your stats</h3>
-          </div>
-          <table class="table">
-            <tbody>
-              <tr><td>Words typed (Only for practice mode)</td> <td><span id="words-typed"><?php echo $word_typed ?></span></td></tr>
-              <tr><td>Average CPM</td>  <td><span id="average-cpm"><?php echo $avg_cpm ?></span></td></tr>
-              <tr><td>Accuracy</td> <td><span id="accuracy"><?php echo $avg_accuracy; ?></span>%</td></tr>
-            </tbody>
-          </table>
-      </div>
-      </div>
     </div>
-      
-  <div class="panel panel-success">
-    <div class="panel-heading">
-      <h3 class="panel-title">Activity log</h3>
-    </div>
-    <table class="table">
-      <tbody>
-          <?php foreach ($log as $key) { ?>
-          <?php if ($key['type'] == "lesson") { ?>
-            <tr>
-              <td>You completed <a id="exercise-name" href="<?php echo site_url('lesson/detail/')?><?php echo $key['title_id']?>"><?php echo $key['title'] ?></a> in <span id="exercise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
-              <td><span id="log-time"><?php echo $key['date'] ?></span>
-            </tr>
-           <?php } else { ?>
-              <tr>
-              <td>You completed <a id="exercise-name" href="<?php echo site_url('practice/paragraph/') . $key['title_id'] ?>"><?php echo $key['title'] ?></a> in <span id="exercise-time"><?php echo $key['time'] ?></span> with a CPM rate of <span id="exercise-cpm"><?php echo $key['cpm'] ?></span> and <span id="exercise-activity"><?php echo $key['accuracy'] ?></span>% accuracy.</td>
-              <td><span id="log-time"><?php echo $key['date'] ?></span>
-            </tr>
-           <?php } ?>
-          <?php } ?>
-     
-      </tbody>
-    </table>
-
-  </main>
-  
+  </div>
 </body>
