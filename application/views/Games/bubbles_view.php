@@ -61,10 +61,39 @@
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
+
+  <div class="modal fade" id="modal-intro">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">How to play</h4>
+        </div>
+        <div class="modal-body">
+          <p>Type all lowercase letters of the alphabet, from <b>a</b> to <b>z</b>, one by one.</p>
+          <p>Don't worry if you got the wrong letter - just re-type the correct one.</p>
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Top players</h3>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr><td>kgjalkjfklasj</td> <td><span id="words-typed">00:06</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="<?php echo base_url(); ?>" class="btn btn-danger">Back</a>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
   
 
   <main class="container text-center">
-    <h2>Type all lowercase letters of the alphabet, one by one</h2>
+    <h2>Bubbles</h2>
     <p>Start typing when you're ready!</p>
     <div class="row">
       <div class="col-sm-8 col-md-6 col-lg-4 col-sm-offset-2 col-md-offset-3 col-lg-offset-4 panel panel-info">
@@ -128,7 +157,36 @@
           <a href="<?php echo base_url(); ?>" class="btn btn-danger">Back</a>
           <a href="<?php echo base_url('bubbles'); ?>"  class="btn btn-info">Play again</a>
           <button type="button" class="btn btn-success btn-share">Share on Facebook</button>
+        </div><div class="modal fade" id="modal-intro">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">How to play</h4>
         </div>
+        <div class="modal-body">
+          <p>A random string of characters will appear on the page. Your task is to type that string into the box and press Enter before the time runs out.</p>
+          <p>If you submit the wrong string or the time is up, you lose the game.</p>
+          <p>It'll get harder and harder, so be prepared!</p>
+
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Top players</h3>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr><td>kgjalkjfklasj</td> <td><span id="words-typed">00:06</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <a href="<?php echo base_url(); ?>" class="btn btn-danger">Back</a>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
+        </div>
+      </div>
+    </div>
+  </div>
       </div>
     </div>
   </div>

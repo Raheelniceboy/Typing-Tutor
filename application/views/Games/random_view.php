@@ -12,7 +12,6 @@
   <script src="<?php echo base_url('js/random.js');?>"></script>  
 </head>
 <body>
-  
 
   
   <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -74,8 +73,19 @@
           <p>A random string of characters will appear on the page. Your task is to type that string into the box and press Enter before the time runs out.</p>
           <p>If you submit the wrong string or the time is up, you lose the game.</p>
           <p>It'll get harder and harder, so be prepared!</p>
+          <div class="panel panel-success">
+            <div class="panel-heading">
+              <h3 class="panel-title">Top players</h3>
+            </div>
+            <table class="table">
+              <tbody>
+                <tr><td>ajflkjad</td> <td>34</td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
         <div class="modal-footer">
+          <a href="<?php echo base_url(); ?>" class="btn btn-danger">Back</a>
           <button type="button" class="btn btn-primary" data-dismiss="modal">Start</button>
         </div>
       </div>

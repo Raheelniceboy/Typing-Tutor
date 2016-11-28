@@ -84,7 +84,19 @@
               <tr><td>Accuracy</td> <td><span id="accuracy"><?php echo $avg_accuracy; ?></span>%</td></tr>
             </tbody>
           </table>
-      </div>
+        </div>
+
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h3 class="panel-title">Your high scores</h3>
+          </div>
+          <table class="table">
+            <tbody>
+              <tr><td>Bubbles</td> <td>00:04</td></tr>
+              <tr><td>Random</td> <td>4</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
       

@@ -18,7 +18,7 @@ $(function() {
 
     startLevel();
     window.onkeydown = function(event) {
-        if (!typing) {
+        if (!$("#modal-intro").hasClass('in') && !typing) {
             start = (new Date).getTime();
             typing = true;
         }

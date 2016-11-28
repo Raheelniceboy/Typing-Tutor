@@ -1,4 +1,5 @@
 $(function() {
+    $("#modal-intro").modal("show");
     var typing = false;
     var start = 0;
     var timer = 0;
@@ -6,7 +7,7 @@ $(function() {
     var done = false;
     var alphabet = "abcdefghijklmnopqrstuvwxyz"
     window.onkeydown = function(event) {
-        if (!typing) {
+        if (!$("#modal-intro").hasClass('in') && !typing) {
             typing = true;
             start = (new Date).getTime();
             setInterval(setTime, 1000);
@@ -18,20 +19,21 @@ $(function() {
         }
     }
     $(document).keypress(function(event) {
-        var ch = String.fromCharCode(event.which);
-        console.log(ch);
-        if (ch == alphabet.charAt(current)) {
-            $("#" + alphabet.charAt(current)).addClass("invisible");
-            if (current == 25) {
-                // success
-                done = true;
-                var message = "You finished this game in " + $("#timer-text").text() + "!";
-                $("#modal-message").text(message);
-                $("#modal-success").modal("show");
-            }
-            else {
-                 $("#" + alphabet.charAt(current + 1)).addClass("current");
-                 current++;
+        if (typing) {
+            var ch = String.fromCharCode(event.which);
+            if (ch == alphabet.charAt(current)) {
+                $("#" + alphabet.charAt(current)).addClass("invisible");
+                if (current == 25) {
+                    // success
+                    done = true;
+                    var message = "You finished this game in " + $("#timer-text").text() + "!";
+                    $("#modal-message").text(message);
+                    $("#modal-success").modal("show");
+                }
+                else {
+                    $("#" + alphabet.charAt(current + 1)).addClass("current");
+                    current++;
+                }
             }
         }
     });
