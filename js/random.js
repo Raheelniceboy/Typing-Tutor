@@ -47,27 +47,27 @@ $(function() {
         clearInterval(timerId);
         if (level >= 1 && level <= 5) {
             num = getRandomInt(3, 8);
-            time = Math.round((3 - (level-1) * 0.1) * num);
+            time = Math.round((2.5 - (level-1) * 0.1) * num);
         }
         else if (level >=6 && level <= 10) {
             num = getRandomInt(5, 10);
             selected = alphabet;
-            time = Math.round((3 - (level-6) * 0.1) * num);
+            time = Math.round((2 - (level-6) * 0.1) * num);
         }
         else if (level >= 11 && level <= 20) {
             num = getRandomInt(8, 15);
             selected = alphanumeric;
-            time = Math.round((2 - (level-10) * 0.1) * num);
+            time = Math.round((1.5 - (level-10) * 0.1) * num);
         }
         else if (level >= 21 && level <= 30) {
             num = getRandomInt(14, 20);
             selected = characters;
-            time = Math.round((2 - (level-20) * 0.1) * num);
+            time = Math.round((1 - (level-20) * 0.1) * num);
         }
         else {
             num = getRandomInt(17, 25);
             selected = morecharacters;
-            time = Math.round(0.6 * num);
+            time = Math.round(0.3 * num);
         }
         for (var i=0; i<num; i++) {
             txt += selected.charAt(getRandomInt(0, selected.length));

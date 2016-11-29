@@ -97,7 +97,7 @@
    <div id="typing-panel" class="col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2 panel panel-success pre-scrollable">
       <div class="panel-body">
         <textarea id="space-trick" autofocus="" style="opacity: 0; display:none"></textarea>
-        <samp id="typing-field"><span class="text-current" id="0"><?php echo $text[0]; ?></span><?php for ($i = 1; $i < 5; $i++){ echo "<span id ='". $i ."'>" . $text[$i] . "</span>"; }?></samp>
+        <samp id="typing-field"><span class="text-current" id="0"><?php echo $text[0]; ?></span><?php for ($i = 1; $i < strlen($text); $i++){ echo "<span id ='". $i ."'>" . $text[$i] . "</span>"; }?></samp>
       </div>
     </div>
     

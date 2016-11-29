@@ -100,7 +100,7 @@
           <h1>And better yet, it's free.</h1>
           <p>We believe touch typing is a must-have skill for everybody in this day and age. So, what are you waiting for?</p>
           <button class="btn btn-default btn-fb-login">Sign in with Facebook</button>
-          <a class="btn btn-default" href="paragraph.html">Try a demo</a>
+          <a class="btn btn-default" href="<?php echo base_url("practice/paragraph/100"); ?>">Try a demo</a>
         </div>
       </div>
     </section>
