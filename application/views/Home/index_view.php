@@ -37,7 +37,7 @@
             <a href="<?php echo base_url('practice'); ?>">Practice</a>
           </li>
           <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Game <span class="caret"></span></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Games <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="<?php echo base_url('bubbles'); ?>">Bubbles</a></li>
                 <li><a href="<?php echo base_url('random'); ?>">Random</a></li>

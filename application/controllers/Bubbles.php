@@ -10,7 +10,7 @@
 			$data['top'] = $this->User_model->get_top_player('Bubbles');
 			// print_r($data['top']);
 			// die();
-			$this->load->view('Games/bubbles_view', $data);
+			$this->load->view('Games /bubbles_view', $data);
 		}
 	}
  ?>

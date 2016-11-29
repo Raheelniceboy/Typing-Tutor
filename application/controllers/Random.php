@@ -16,7 +16,7 @@
 			// echo $data['top'][0]['point'];
 			// echo count($data['top']);
 			// die();
-			$this->load->view('Games/random_view', $data);
+			$this->load->view('Games /random_view', $data);
 		}
 	}
  ?>
